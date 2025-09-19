@@ -27,7 +27,7 @@ export default function NpkRecommendation() {
 
     setLoading(true);
     try {
-      const res = await fetch("https://smart-crop-backend.onrender.com/api/npk-recommendation", {
+      const res = await fetch("https://smart-crop-advisory-backend.onrender.com/api/npk-recommendation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ pH: pHv, area_acres: areaV, crop })
