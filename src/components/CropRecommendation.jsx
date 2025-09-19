@@ -20,7 +20,7 @@ function CropRecommendation() {
       try {
         // ✅ CHANGE: Fetch weather data from backend
         const weatherRes = await axios.get(
-          `https://smart-crop-backend.onrender.com/api/weather?lat=${lat}&lon=${lon}`
+          `https://smart-crop-advisory-backend.onrender.com/api/weather?lat=${lat}&lon=${lon}`
         );
 
         const weatherData = {
@@ -32,7 +32,7 @@ function CropRecommendation() {
         };
 
         // ✅ CHANGE: Send soil + season + weather to recommendation API
-        const res = await fetch("http://localhost:5000/api/recommendation", {
+        const res = await fetch("https://smart-crop-advisory-backend.onrender.com/api/recommendation", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ soilType, season, humidity, lat, lon }),
