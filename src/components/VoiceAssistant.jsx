@@ -48,7 +48,7 @@ const VoiceAssistant = () => {
     const sendQuery = async (q) => {
         try {
             console.log("📤 Sending query:", q);
-            const res = await fetch("https://smart-crop-backend.onrender.com/api/chatbot", {
+            const res = await fetch("https://smart-crop-advisory-backend.onrender.com/api/chatbot", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ query: q }),
