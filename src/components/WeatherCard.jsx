@@ -14,7 +14,7 @@ const WeatherCard = ({ lang = "en" }) => {
         (pos) => {
           const { latitude, longitude } = pos.coords;
           console.log(`${latitude} and ${longitude}`);
-          fetch(`https://smart-crop-advisory-backend.onrender.com/api/weather?lat=${latitude}&lon=${longitude}`)
+          fetch(`https://smart-crop-backend.onrender.com/api/weather?lat=${latitude}&lon=${longitude}`)
             .then((res) => res.json())
             .then((data) => {
               if (data.success) setWeather(data.data);
@@ -24,7 +24,7 @@ const WeatherCard = ({ lang = "en" }) => {
         },
         () => {
           // If GPS fails → fallback (backend auto Belgaum)
-          fetch("https://smart-crop-advisory-backend.onrender.com/api/weather")
+          fetch("https://smart-crop-backend.onrender.com/api/weather")
             .then((res) => res.json())
             .then((data) => {
               if (data.success) setWeather(data.data);
@@ -35,7 +35,7 @@ const WeatherCard = ({ lang = "en" }) => {
       );
     } else {
       // If GPS not supported → fallback
-      fetch("https://smart-crop-advisory-backend.onrender.com/api/weather")
+      fetch("https://smart-crop-backend.onrender.com/api/weather")
         .then((res) => res.json())
         .then((data) => {
           if (data.success) setWeather(data.data);
