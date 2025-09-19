@@ -31,7 +31,7 @@ function App() {
         </div>
         {/* need a div which is for voice assistance
         it should be a small sticky image at the right bottom */}
-        <div>
+        <div classname="mb-4">
           <Voice />
         </div>
       </main>
