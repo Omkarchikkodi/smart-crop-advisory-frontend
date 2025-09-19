@@ -20,7 +20,7 @@ export default function MarketIntelligence({ lang }) {
     setLoading(true);
     try {
       // 🔹 CHANGE: endpoint renamed to /api/market/:crop (cleaner REST format)
-      const res = await fetch(`https://smart-crop-backend.onrender.com/api/market/${encodeURIComponent(crop)}`);
+      const res = await fetch(`https://smart-crop-advisory-backend.onrender.com/api/market/${encodeURIComponent(crop)}`);
       const json = await res.json();
       if (json.success && json.prices) {
         setPrices(json.prices); // ✅ correct key from backend
