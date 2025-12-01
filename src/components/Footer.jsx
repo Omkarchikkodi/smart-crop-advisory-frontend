@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <footer className="bg-green-800 text-gray-200 text-center py-4 mt-8">
-      <p>Innovisionaries - 2025 | {t("footer.rights")} &copy;</p>
+      <p>Omkar Pandit Chikkodi - 2025 | {t("footer.rights")} &copy;</p>
     </footer>
   );
 }
